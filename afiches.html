@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="utf-8">
+	<title>Brocca's Design</title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+    <script src="js/jQuery.BlackAndWhite.js"></script>
+	<script src="js/modernizr-2.5.3.js"></script>
+	<script src="js/prefixfree.min.js"></script>
+    <script type="text/javascript" src="js/script.js"></script>
+	<link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+	<header>
+		<div class="cabecera">
+			<img src="img/logo.png">
+		</div>
+	</header>
+	<div class="espacio">&nbsp;</div>
+	<nav>
+		<ul>
+        	<li><a href="index.html">Inicio</a></li>
+			<li><a href="afiches.html">Afiches</a></li>
+			<li><a href="/">Banners</a></li>
+			<li><a href="/">Brochures</a></li>
+			<li><a href="/">Ilustraciones</a></li>
+			<li><a href="/">Logos</a></li>
+			<li><a href="/">Viñetas</a></li>
+		</ul>
+	</nav>	
+	<section>
+        <ul id="slideshow">
+        	<li>
+            	<h3></h3>
+                <span>img/afiches/01.jpg</span>
+                <p></p>
+                <img src="img/afiches/01-sm.jpg" alt="Afiche 1" />
+            </li>
+            <li>
+                <h3></h3>
+                <span>img/afiches/02.jpg</span>
+                <p></p>
+                <img src="img/afiches/02-sm.jpg" alt="Afiche 2" />
+            </li>
+            <li>
+                <h3></h3>
+                <span>img/afiches/03.jpg</span>
+                <p></p>
+                <img src="img/afiches/03-sm.jpg" alt="Afiche 3" />
+            </li>
+            <li>
+                <h3></h3>
+                <span>img/afiches/04.jpg</span>
+                <p></p>
+                <img src="img/afiches/04-sm.jpg" alt="Afiche 4" />
+            </li>
+            <li>
+                <h3></h3>
+                <span>img/afiches/05.jpg</span>
+                <p></p>
+                <img src="img/afiches/05-sm.jpg" alt="Afiche 5" />
+            </li>
+        </ul>
+        <div id="wrapper">
+            <div id="fullsize">
+                <div id="imgprev" class="imgnav" title="Previous Image"></div>
+                <div id="imglink"></div>
+                <div id="imgnext" class="imgnav" title="Next Image"></div>
+                <div id="image"></div>
+                <div id="information">
+                    <h3></h3>
+                    <p></p>
+                </div>
+            </div>
+            <div id="thumbnails">
+                <div id="slideleft" title="Slide Left"></div>
+                <div id="slidearea">
+                    <div id="slider"></div>
+                </div>
+                <div id="slideright" title="Slide Right"></div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            $('slideshow').style.display='none';
+            $('wrapper').style.display='block';
+            var slideshow=new TINY.slideshow("slideshow");
+            window.onload=function(){
+                slideshow.auto=true;
+                slideshow.speed=5;
+                slideshow.link="linkhover";
+                //slideshow.info="information";
+                slideshow.thumbs="slider";
+                slideshow.left="slideleft";
+                slideshow.right="slideright";
+                slideshow.scrollSpeed=4;
+                slideshow.spacing=7;
+                slideshow.active="#fff";
+                slideshow.init("slideshow","image","imgprev","imgnext","imglink");
+            }
+        </script>                           
+    </section>
+    <footer>
+    </footer>
+</body>
+</html>
